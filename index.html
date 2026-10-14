@@ -30,3 +30,155 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .stat-num{font-family:var(--mono);font-size:1.9rem;font-weight:700;color:var(--accent);line-height:1}
 .stat-label{font-size:.75rem;color:var(--muted);letter-spacing:.04em;margin-top:.3rem}
 .hero-actions{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:.8rem 1.75rem;border-radius:2px;text-decoration:none;transition:all .2s;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:.4rem}
+.btn-primary{background:var(--accent);color:#090b0e;font-weight:700}
+.btn-primary:hover{background:#00edb4;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border2)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.btn-github{background:var(--bg2);color:var(--text);border:1px solid var(--border2)}
+.btn-github:hover{border-color:var(--accent2);color:var(--accent2)}
+section{position:relative;z-index:1;padding:6rem 5rem;max-width:1280px;margin:0 auto}
+.section-label{font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.6rem}
+.section-title{font-family:var(--mono);font-size:clamp(1.6rem,2.8vw,2.5rem);font-weight:700;margin-bottom:3rem;line-height:1.2}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.25rem}
+.skill-card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1.6rem;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+.skill-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--card-accent,var(--accent));transform:scaleX(0);transition:transform .3s ease;transform-origin:left}
+.skill-card:hover::after{transform:scaleX(1)}
+.skill-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.skill-card-title{font-family:var(--mono);font-size:.74rem;color:var(--card-accent,var(--accent));letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tag{font-family:var(--mono);font-size:.7rem;padding:.28rem .65rem;background:var(--bg3);border:1px solid var(--border);border-radius:2px;color:var(--text)}
+.timeline{position:relative;padding-left:1.75rem}
+.timeline::before{content:'';position:absolute;left:0;top:.6rem;bottom:.5rem;width:1px;background:linear-gradient(to bottom,var(--accent),var(--border))}
+.timeline-item{position:relative;margin-bottom:3.5rem;padding-left:2.25rem}
+.timeline-item::before{content:'';position:absolute;left:-1.75rem;top:.55rem;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--bg),0 0 0 4px rgba(0,212,160,0.3)}
+.timeline-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.25rem;flex-wrap:wrap;gap:.5rem}
+.timeline-date{font-family:var(--mono);font-size:.7rem;color:var(--accent);letter-spacing:.1em;background:rgba(0,212,160,0.07);border:1px solid rgba(0,212,160,0.15);padding:.2rem .65rem;border-radius:2px;white-space:nowrap}
+.timeline-role{font-family:var(--mono);font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
+.timeline-company{font-size:.88rem;color:var(--muted);margin-bottom:1.25rem}
+.timeline-bullets{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.timeline-bullets li{font-size:.88rem;color:var(--muted);padding-left:1.2rem;position:relative;line-height:1.65}
+.timeline-bullets li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:.65rem;top:.15em}
+.timeline-bullets li strong{color:var(--text);font-weight:500}
+.metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:3.5rem}
+.metric-card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1.5rem;text-align:center}
+.metric-num{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:.4rem}
+.metric-label{font-size:.78rem;color:var(--muted);line-height:1.4}
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem}
+.achievement-card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1.4rem;display:flex;gap:1rem;transition:border-color .2s}
+.achievement-card:hover{border-color:var(--border2)}
+.ach-icon{font-family:var(--mono);font-size:1.2rem;color:var(--accent);font-weight:700;flex-shrink:0;min-width:3rem;line-height:1;padding-top:.1rem}
+.ach-text{font-size:.86rem;color:var(--muted);line-height:1.6}
+.ach-text strong{color:var(--text);display:block;font-weight:500;margin-bottom:.2rem;font-size:.88rem}
+.github-section{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2.5rem}
+.github-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.github-repos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-bottom:1.5rem}
+.repo-card{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:1.25rem;transition:border-color .2s}
+.repo-card:hover{border-color:rgba(59,130,246,0.35)}
+.repo-name{font-family:var(--mono);font-size:.8rem;color:var(--accent2);margin-bottom:.4rem;font-weight:700}
+.repo-desc{font-size:.8rem;color:var(--muted);line-height:1.55;margin-bottom:.75rem}
+.repo-tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.repo-tag{font-family:var(--mono);font-size:.65rem;padding:.18rem .5rem;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);border-radius:2px;color:var(--accent2)}
+.github-cta{text-align:center;padding-top:.5rem;font-size:.85rem;color:var(--muted)}
+.github-cta a{color:var(--accent2);text-decoration:none;font-family:var(--mono);font-size:.78rem}
+.github-cta a:hover{text-decoration:underline}
+.certs-row{display:flex;gap:1rem;flex-wrap:wrap}
+.cert-badge{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:1rem 1.4rem;display:flex;align-items:center;gap:.85rem;transition:border-color .2s}
+.cert-badge:hover{border-color:rgba(0,212,160,0.25)}
+.cert-icon{width:38px;height:38px;background:rgba(0,212,160,0.08);border:1px solid rgba(0,212,160,0.18);border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.68rem;color:var(--accent);font-weight:700}
+.cert-name{font-size:.88rem;font-weight:500;color:var(--text)}
+.cert-issuer{font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:.85rem}
+.contact-link{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--text);transition:all .2s;padding:.9rem 1.2rem;background:var(--bg2);border:1px solid var(--border);border-radius:4px}
+.contact-link:hover{border-color:var(--accent);color:var(--accent)}
+.contact-link-icon{font-family:var(--mono);font-size:.7rem;color:var(--accent);min-width:2.5rem;font-weight:700}
+.contact-link-text{font-size:.88rem}
+.open-to-work{background:rgba(0,212,160,0.05);border:1px solid rgba(0,212,160,0.13);border-radius:4px;padding:1.75rem}
+.open-dot{display:inline-block;width:7px;height:7px;background:var(--accent);border-radius:50%;margin-right:.5rem;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+.open-title{font-family:var(--mono);font-size:.78rem;color:var(--accent);font-weight:700;letter-spacing:.06em;margin-bottom:.6rem}
+.open-desc{font-size:.86rem;color:var(--muted);line-height:1.75}
+.open-desc strong{color:var(--text);font-weight:500}
+footer{border-top:1px solid var(--border);padding:2rem 5rem;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.7rem;color:var(--muted);position:relative;z-index:1;flex-wrap:wrap;gap:.5rem}
+.full-divider{width:100%;height:1px;background:var(--border);position:relative;z-index:1}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.hero,section{padding:6rem 1.5rem 3rem}.metrics-row{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}.hero-stats{flex-direction:column;width:100%}.stat-item{border-right:none;border-bottom:1px solid var(--border)}.stat-item:last-child{border-bottom:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">$ santhoshdsivan</div>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Open to new opportunities · Chennai, India</div>
+  <h1>Santhosh Sivan<span>DevOps &amp; Platform Engineer</span></h1>
+  <p class="hero-desc">
+    <strong>4+ years</strong> architecting and governing Kubernetes-based infrastructure on AWS. As sole DevOps owner across two products under the same organization, Cookr and Comixo (a customer-facing SaaS product), for a <strong>25+ engineer team</strong>, defined and enforced the CI/CD, GitOps, IaC, and security standards adopted across <strong>70+ repositories</strong>, built the observability and SRE practice from scratch, and cut AWS spend <strong>50%</strong> while securing <strong>$100K+ in cloud credits</strong>. Extended the platform to serve AI/ML workloads, deploying LLM and embedding models for analytics, RAG, and semantic search on GPU infrastructure. Experienced across the full DevSecOps lifecycle: CI/CD, IaC, container orchestration, security scanning, observability, and cost governance.
+  </p>
+  <div class="hero-stats">
+    <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">K8s clusters managed</span></div>
+    <div class="stat-item"><span class="stat-num">52</span><span class="stat-label">Microservices in prod</span></div>
+    <div class="stat-item"><span class="stat-num">50%</span><span class="stat-label">AWS cost reduction</span></div>
+    <div class="stat-item"><span class="stat-num">99.8%</span><span class="stat-label">Platform availability</span></div>
+  </div>
+  <div class="hero-actions">
+    <a href="mailto:santhoshdsivan@gmail.com" class="btn btn-primary">Get in touch</a>
+    <a href="https://github.com/santhoshdsivan31/santhosh-devops-portfolio" target="_blank" class="btn btn-github">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/me-santhosh-sivan" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
+  </div>
+</div>
+
+<div class="full-divider"></div>
+
+<section id="skills">
+  <div class="section-label">// 01 — technical skills</div>
+  <h2 class="section-title">What I build with</h2>
+  <div class="skills-grid">
+    <div class="skill-card" style="--card-accent:#00d4a0;"><div class="skill-card-title">⎈ Platform &amp; Kubernetes</div><div class="skill-tags"><span class="tag">Amazon EKS</span><span class="tag">GitOps (ArgoCD)</span><span class="tag">Helm</span><span class="tag">Karpenter</span><span class="tag">KEDA autoscaling</span><span class="tag">IRSA</span><span class="tag">Multi-tenant cluster architecture</span><span class="tag">Kubernetes Operators</span><span class="tag">Velero DR</span><span class="tag">Zero-downtime upgrades</span><span class="tag">Progressive rollouts</span></div></div>
+    <div class="skill-card" style="--card-accent:#10b981;"><div class="skill-card-title">🔐 DevSecOps &amp; Governance</div><div class="skill-tags"><span class="tag">Golden Paths</span><span class="tag">Reference architectures</span><span class="tag">Reusable CI/CD &amp; IaC templates</span><span class="tag">Security-by-default pipelines</span><span class="tag">SAST/SCA (Trivy, Snyk, SonarQube)</span><span class="tag">Falco runtime security</span><span class="tag">WAF</span><span class="tag">IAM hardening</span><span class="tag">Org-wide VAPT remediation</span></div></div>
+    <div class="skill-card" style="--card-accent:#f97316;"><div class="skill-card-title">⚡ CI/CD</div><div class="skill-tags"><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">CircleCI</span><span class="tag">Bitbucket Pipelines</span><span class="tag">Standardized across 70+ repositories</span><span class="tag">Deploy time 4–5 min to under 2</span></div></div>
+    <div class="skill-card" style="--card-accent:#3b82f6;"><div class="skill-card-title">☁ Infrastructure as Code</div><div class="skill-tags"><span class="tag">Terraform (reusable modules)</span><span class="tag">S3 remote state</span><span class="tag">DynamoDB locking</span><span class="tag">AWS CloudFormation</span><span class="tag">Multi-account/multi-environment patterns</span></div></div>
+    <div class="skill-card" style="--card-accent:#a855f7;"><div class="skill-card-title">📊 Observability &amp; SRE</div><div class="skill-tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Loki</span><span class="tag">Alertmanager</span><span class="tag">Datadog</span><span class="tag">AWS CloudWatch</span><span class="tag">Metrics/logs/traces</span><span class="tag">SLIs/SLOs</span><span class="tag">Alerting standards</span><span class="tag">Incident response &amp; RCA</span></div></div>
+    <div class="skill-card" style="--card-accent:#00d4a0;"><div class="skill-card-title">💰 Cloud &amp; Cost Optimization</div><div class="skill-tags"><span class="tag">AWS (EKS, EC2, VPC, IAM, S3, Lambda, ELB, Auto Scaling)</span><span class="tag">Kubecost</span><span class="tag">Workload right-sizing</span><span class="tag">AWS Activate/POC/Well-Architected credit programs</span><span class="tag">50% spend reduction</span><span class="tag">$100K+ credits secured</span></div></div>
+    <div class="skill-card" style="--card-accent:#3b82f6;"><div class="skill-card-title">🤖 AI/ML &amp; AIOps</div><div class="skill-tags"><span class="tag">GPU infrastructure for model serving</span><span class="tag">LLM deployment (Llama 3.1)</span><span class="tag">Embedding models (BAAI BGE-M3)</span><span class="tag">RAG</span><span class="tag">Semantic search</span><span class="tag">Analytics pipelines</span></div></div>
+    <div class="skill-card" style="--card-accent:#f59e0b;"><div class="skill-card-title">🗄 Messaging, Data &amp; Caching</div><div class="skill-tags"><span class="tag">Apache Kafka (MSK)</span><span class="tag">RabbitMQ</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">Aurora PostgreSQL</span></div></div>
+    <div class="skill-card" style="--card-accent:#10b981;"><div class="skill-card-title">🌐 Networking &amp; API Management</div><div class="skill-tags"><span class="tag">VPC</span><span class="tag">Security Groups</span><span class="tag">Network ACLs</span><span class="tag">ALB</span><span class="tag">Kong API Gateway</span><span class="tag">DNS/TLS management</span></div></div>
+    <div class="skill-card" style="--card-accent:#f97316;"><div class="skill-card-title">🖥 Systems &amp; Scripting</div><div class="skill-tags"><span class="tag">Linux (Debian/Ubuntu)</span><span class="tag">Nginx</span><span class="tag">Bash</span><span class="tag">Python</span><span class="tag">Git</span><span class="tag">Bitbucket</span></div></div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<section id="experience">
+  <div class="section-label">// 02 — professional experience</div>
+  <h2 class="section-title">Where I've worked</h2>
+
+  <div class="metrics-row">
+    <div class="metric-card"><div class="metric-num">6</div><div class="metric-label">Kubernetes clusters<br>managed</div></div>
+    <div class="metric-card"><div class="metric-num">52</div><div class="metric-label">Microservices in<br>production</div></div>
+    <div class="metric-card"><div class="metric-num">70+</div><div class="metric-label">Repositories on<br>standardized CI/CD</div></div>
+    <div class="metric-card"><div class="metric-num">15+</div><div class="metric-label">AWS services<br>automated via Terraform</div></div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div><div class="timeline-role">DevOps Engineer (Sole Owner)</div><div class="timeline-company">Cookr &amp; Comixo</div></div>
+        <span class="timeline-date">NOV 2023 — PRESENT</span>
+      </div>
+      <ul class="timeline-bullets">
+        <li><strong>Multi-product ownership:</strong> Sole DevOps engineer across two products under the same organization, Cookr and Comixo (a customer-facing SaaS product), owning architecture, releases, security, and cost for both.</li>
+        <li><strong>Standards &amp; Golden Paths:</strong> Defined the CI/CD, GitOps, and IaC patterns used across 70+ repositories, cutting deployment time from 4–5 minutes to under 2 and enabling multiple production releases per hour.</li>
+        <li><stro
